@@ -2,12 +2,30 @@
 Listen to music from your Spotify Premium music account
 
 ## About
-Stream your favorite music from the popular Spotify music service.  Spotify
+Stream your favorite music from the popular Spotify music service. Spotify
 Premium users can search and play tracks from their own playlists or the huge
 Spotify music library.
 
 You can also control your Mycroft device using the Spotify Connect system.
 So play DJ on your phone while listening on Mycroft!
+
+### This skill doesn't do any playback
+
+This skills works with the spotify connect protocol and generally requires the user to setup a spotify player themselves.
+
+For picroft users [raspotify](https://github.com/dtcooper/raspotify) is a good choice.
+
+Install it and then edit the `/etc/default/raspotify.conf` file setting
+
+- DEVICE_NAME to the name of the Mycroft unit (as registered at home.mycroft.ai):
+`DEVICE_NAME="<My Mycroft Unit>"
+
+- and username and password
+`OPTIONS="--username <My Username> --password <My Password>"`
+
+For desktop users the official spotify player works well.
+
+The exception to this is the Mark-1 which is shipped with a spotify player library.
 
 ### Authorization:
 This Skill uses two different methods of authentication. Both need to be filled in correctly for the **Skill** to function correctly.
